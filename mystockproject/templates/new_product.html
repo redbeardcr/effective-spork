@@ -9,5 +9,11 @@
 {% endblock %}
 
 {% block content %}
-
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-success">Add</button>
+  </form>
 {% endblock %}
+
+

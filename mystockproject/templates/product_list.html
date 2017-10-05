@@ -6,6 +6,9 @@
 {% endblock %}
 
 {% block content %}
+  <div class="mb-4">
+    <a href="{% url 'new_product' %}" class="btn btn-primary">New Product</a>
+  </div>
   <table class="table">
     <thead class="thead-inverse">
       <tr>
@@ -27,5 +30,4 @@
     </tbody>
   </table>
 
-  <button type="button" class="btn btn-primary">+ Add Product</button>
 {% endblock %}
