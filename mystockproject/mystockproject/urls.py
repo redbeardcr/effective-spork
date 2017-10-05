@@ -21,5 +21,7 @@ from stockcontrol import views
 
 urlpatterns = [
     url(r'^$', views.home, name='home'),
+    url(r'^new', views.new_product, name='new_product'),
+    url(r'^list', views.product_list, name='product_list'),
     url(r'^admin/', admin.site.urls),
 ]
