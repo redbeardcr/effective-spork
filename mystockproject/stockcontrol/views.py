@@ -16,17 +16,13 @@ def product_list(request):
     return render(request, 'product_list.html', {'products': products})
 
 
-#def new_product(request):
-#    return render(request, 'new_product.html')
-
-
 def new_product(request):
-    if request.method == 'POST':
+    if request.method == "POST":
         form = NewProductForm(request.POST)
         if form.is_valid():
-            form = form.save(commit=False)
-            form.save()
-        return redirect('product_list')  # TODO: redirect to the created topic page
+            product = form.save(commit=False)
+            product.save()
+            return redirect('product_list')
     else:
-        form = NewTopicForm()
+        form = NewProductForm()
     return render(request, 'new_product.html', {'form': form})
