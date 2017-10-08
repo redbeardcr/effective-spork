@@ -26,7 +26,3 @@ def new_product(request):
     else:
         form = NewProductForm()
     return render(request, 'new_product.html', {'form': form})
-
-
-def signup(request):
-    return render(request, 'signup.html')
