@@ -24,6 +24,7 @@ from stockcontrol import views
 urlpatterns = [
     url(r'^$', views.home, name='home'),
     url(r'^signup/$', accounts_views.signup, name='signup'),
+    url(r'^login/$', auth_views.LoginView.as_view(template_name='login.html'), name='login'),
     url(r'^logout/$', auth_views.LogoutView.as_view(), name='logout'),
     url(r'^new/$', views.new_product, name='new_product'),
     url(r'^list', views.product_list, name='product_list'),
